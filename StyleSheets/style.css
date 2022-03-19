@@ -1,0 +1,255 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/************** NAVIGATION BAR ***************/
+#navbar{
+    font-family: 'Fredoka', sans-serif;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    z-index: -1;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* Navigation Bar : Logo and Image */
+#logo{
+    margin: 10px 34px;
+}
+#logo img{
+    margin: 3px 6px;
+    height: 55px;
+}
+
+/* Navigation Bar : List Styling */
+#navbar ul{
+    display: flex;
+}
+#navbar ul li{
+    list-style: none;
+}
+#navbar ul li a{
+    font-size: 1.5rem;
+    color: white;
+    display: block;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    padding: 20px 35px;
+    margin: 5px 5px;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: rgb(252, 218, 218);
+}
+#navbar ul li a:active{
+    transform: translateY(2px);
+    background-color: rgb(204, 85, 85);
+}
+
+
+/******************* HOME SECTION ****************/
+#home{
+    display: flex;
+    padding: 3px 200px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 460px;
+}
+#home::before{
+    content: "";
+    background: url(../images/home_background_image.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    opacity: 0.65;
+    height: 32rem;
+    width: 100%;
+}
+
+#home h1{
+    padding: 12px;
+}
+
+#home p{
+    font-family: 'Fredoka', sans-serif;
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+/************** SERVICES SECTION ****************/
+#services{
+    display: flex;
+}
+#services .box{
+    padding: 34px;
+    margin: 20px;
+    border-radius: 23px;
+    border: 2px solid red;
+    background-color: rgb(233, 233, 233);
+}
+#services .box img{
+    display: flex;
+    margin:auto;
+    height: 160px;
+}
+#services .box p{
+    font-family: 'Fredoka', sans-serif;
+}
+
+
+/******************** CLIENTS SECTION ******************/
+#client-section{
+    margin-top: 90px;
+    position: relative;
+}
+#client-section::before{
+    content: "";
+    background-image: url(../images/clients_background_image.jpg);
+    background-repeat: no-repeat;
+    background-size: 1522px;
+    position: absolute;
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client-item{
+    padding: 34px;
+}
+.client-item img{
+    width:140px;
+}
+.client-item img:hover{
+    transform: scale(1.09);
+}
+
+
+
+/************************* CONTACT US ***********************/
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    background: url("../images/ContactUs_background.jpg") center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.35;
+}
+#contact-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 34px;
+}
+#contact-box form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+#contact-box label{
+    display: block;
+    font-size: 1.2rem;
+    margin: 2px;
+    font-family: 'Fredoka', sans-serif;
+}
+#contact-box input{
+    font-size: 1.2rem;
+    display: block;
+    margin: auto;
+    width: 100%;   
+    font-family: 'Fredoka', sans-serif; 
+    height: 25px;
+    border-radius: 6px;
+    border: 2px solid black;
+    padding: 2px 3px;
+    margin-bottom: 10px;
+}
+#contact-box .btn{
+    margin: auto;
+}
+#contact-box textarea{
+    font-size: 1.2rem;
+    width: 100%;
+    font-family: 'Fredoka', sans-serif;
+    border: 2px solid black;
+    border-radius: 6px;
+    height: 90px;
+    padding: 2px 3px;
+    margin-bottom: 25px;
+}
+
+/************************** FOOTER **************************/
+footer{
+    background: black;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+
+
+/********************* UTILITY CLASSES **************/
+.h-primary{
+    font-family: 'Fredoka', sans-serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+.h-secondary{
+    font-family: 'Fredoka', sans-serif;
+    font-size: 2.4rem;
+    padding: 12px;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 210px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.3rem;
+    padding: 11px 27px;
+    border-radius: 14px;
+    background-color: rgb(252, 218, 218);
+    border: 3px ridge black;
+    box-shadow: 2px 2px black;
+    cursor: pointer;
+}
+.btn:hover{
+    color:white;
+    background-color: rgb(204, 85, 85);
+}
+.btn:active{
+    transform: translateY(2px);
+}
+.center{
+    text-align: center;
+}
